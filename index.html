@@ -1,12 +1,12 @@
 <!DOCTYPE html>
 <html lang="ru">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
   <title>Dirty Ramirez Kit v1.0</title>
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:ital,wght@0,400;0,500;1,400&display=swap" rel="stylesheet" />
+  <link rel="preconnect" href="https://fonts.googleapis.com/">
+  <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin="">
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:ital,wght@0,400;0,500;1,400&display=swap" rel="stylesheet">
   <style>
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
@@ -39,6 +39,10 @@
       overflow-x: hidden;
       -webkit-overflow-scrolling: touch;
     }
+
+    /* FIX 1: стили для ссылок */
+    a { color: var(--pink); text-decoration: none; }
+    a:active { opacity: .7; }
 
     /* ── HERO ───────────────────────────── */
     .hero {
@@ -306,6 +310,27 @@
       position: relative; z-index: 1;
     }
 
+    /* FIX 2: стили Telegram-кнопки */
+    .tg-btn {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+      margin-top: 16px;
+      background: rgba(41,182,246,.12);
+      border: 1px solid rgba(41,182,246,.28);
+      border-radius: 99px;
+      padding: 15px 24px;
+      font-family: 'Space Grotesk', sans-serif;
+      font-size: .92rem; font-weight: 700;
+      color: #29B6F6;
+      text-decoration: none;
+      letter-spacing: .02em;
+      transition: background .15s ease;
+      -webkit-tap-highlight-color: transparent;
+    }
+    .tg-btn:active { background: rgba(41,182,246,.22); }
+
     /* ── SCROLL ANIMATIONS ───────────────── */
     .fu {
       opacity: 0; transform: translateY(26px);
@@ -313,12 +338,15 @@
     }
     .fu.on { opacity: 1; transform: translateY(0); }
 
+    /* FIX 3: stagger для 8 карточек */
     .items .card:nth-child(1) { transition-delay:   0ms; }
     .items .card:nth-child(2) { transition-delay:  70ms; }
     .items .card:nth-child(3) { transition-delay: 140ms; }
     .items .card:nth-child(4) { transition-delay: 210ms; }
     .items .card:nth-child(5) { transition-delay: 280ms; }
     .items .card:nth-child(6) { transition-delay: 350ms; }
+    .items .card:nth-child(7) { transition-delay: 420ms; }
+    .items .card:nth-child(8) { transition-delay: 490ms; }
 
     @media (prefers-reduced-motion: reduce) {
       .fu { opacity:1; transform:none; transition:none; }
@@ -345,7 +373,7 @@
 
     <div class="scroll-hint">
       <svg width="14" height="14" viewBox="0 0 14 14" fill="none">
-        <path d="M7 2v10M2 7l5 5 5-5" stroke="white" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/>
+        <path d="M7 2v10M2 7l5 5 5-5" stroke="white" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"></path>
       </svg>
       читай дальше
     </div>
@@ -355,9 +383,9 @@
   <div class="wrap">
 
     <div class="letter fu">
-      <p>Систер, раз читаешь это — посылка дошла, как говорится "птичка в клетке". 🎯</p>
-      <p>Мы с тобой достаточно близко общаемся, чтобы я сказал прямо: я иногда вижу как ты возвращаешься домой — волосы во все стороны, взгляд <em>«я счастлива, но это была насыщенная ночь»(или скоро будут ещё насыщеннее 😄)</em>  Не сужу — живи, наслаждайся, развивайся. Но я в какой-то момент понял по жизни как это бывает: девушка, оказавшись у парня, а своего ничего нет. Там — гель «для всего», полотенце с непонятной биографией и дезодорант с 2019 года.</p>
-      <p>Не хочу чтобы ты когда-либо испытывала этот дискомфорт — поэтому собрал тебе <strong>Dirty Ramirez Kit</strong>. Комплект автономии. Чтобы везде чувствовала себя как дома. 🏠</p>
+      <p>Систер, раз читаешь это — значит посылка дошла, как говорится "птичка в клетке". 🎯</p>
+      <p>Мы с тобой ломаем всё больше стен в общении, обьясню почему я вообще тебе делаю такой подгон: я иногда вижу как ты возвращаешься домой — волосы во все стороны, взгляд <em>«я счастлива, но это была насыщенная ночь\вечер»(и скоро если я правильно понимаю будут ещё насыщеннее 🙈)</em> Но я то уже в силу  опыта и своей пасивной наблюдательности - знаю что вам девочкам тяжело ночевать у парня, когда там нету ничего из девочкинского набора. У них блять — гель «для всего», полотенце с непонятной биографией и дезодорант с 2019 года.</p>
+      <p>Не хочу чтобы ты испытывала этот дискомфорт, а я это видел — поэтому я собрал тебе <strong>Dirty Ramirez Kit</strong> на основе своих инженерных знаний. Комплект автономии, как говрится - "хуй в лодошку и в дорожку" 🚗  ну ты поняла :) 🏠. <br> Я надеюсь у меня получилось во всяком случае!</p>
     </div>
 
     <div class="sec-label fu">
@@ -368,9 +396,27 @@
     <div class="items">
 
       <div class="card pk fu">
+        <div class="ico">💇‍♀️</div>
+        <div class="cbody">
+          <div class="cname">Расчёска</div>
+          <div class="cdesc">Теперь твои волосы будут под контролем. то что у твоих парней нету расчёсок — теперь не проблема 😄</div>
+          <span class="ctag">волосы · под контролем</span>
+        </div>
+      </div>
+
+      <div class="card pk fu">
+      <div class="ico">🪢</div>
+      <div class="cbody">
+        <div class="cname">Резинки для волос</div>
+        <div class="cdesc">Насыпал целую пачку — потому что они исчезают как носки в стиралке. 😄</div>
+        <span class="ctag">стратегический запас</span>
+      </div>
+    </div>
+
+      <div class="card pk fu">
         <div class="ico">🧴</div>
         <div class="cbody">
-          <div class="cname">Мицеллярка Garnier + диски Cotoneve</div>
+          <div class="cname">Мицеллярка  + диски </div>
           <div class="cdesc">Лицо — это святое. Никаких компромиссов с чужим гелем для волос и тела.</div>
           <span class="ctag">лицо под защитой</span>
         </div>
@@ -379,8 +425,8 @@
       <div class="card te fu">
         <div class="ico">🌿</div>
         <div class="cbody">
-          <div class="cname">Спрей Staycool (арбуз)</div>
-          <div class="cdesc">Утром после кофе, вечером, в прцессе вечертнки - просто потому что хочется — пшик и готово, свежее дыхание обеспечено.</div>
+          <div class="cname">Спрей для свежего дыхания</div>
+          <div class="cdesc">Заметил что на встречах с парнями и Особенно ;) после них ты стараешься всегда следить за ультра свежим дыханием, вот тебе капелька уверенности.</div>
           <span class="ctag">быстрая активация</span>
         </div>
       </div>
@@ -389,7 +435,7 @@
         <div class="ico">🌸</div>
         <div class="cbody">
           <div class="cname">Стик Rexona Invisible</div>
-          <div class="cdesc">Плоский, не занимает место в сумке и без белых следов на одежде.</div>
+          <div class="cdesc">Работает и не оставляет белых следов на одежде.</div>
           <span class="ctag">zero marks · compact</span>
         </div>
       </div>
@@ -398,7 +444,7 @@
         <div class="ico">🦷</div>
         <div class="cbody">
           <div class="cname">Набор Jordan</div>
-          <div class="cdesc">Складная щётка + паста. дыхание и зубы в порядке.</div>
+          <div class="cdesc">Складная щётка + паста. дыхание и зубки под защитой.</div>
           <span class="ctag">компактный · складной</span>
         </div>
       </div>
@@ -412,12 +458,21 @@
         </div>
       </div>
 
+      <div class="card vi fu">
+        <div class="ico">🪒</div>
+        <div class="cbody">
+          <div class="cname">Бритва</div>
+          <div class="cdesc">Знаю-знаю — ты всегда собираешься в последний момент 😄 Так что на случай если второпях забыла убрать пару лишних волосиков — я об этом позаботился. Пользуйся спокойно, без спешки но уже по месту 🙊.</div>
+          <span class="ctag">форс-мажор · решён</span>
+        </div>
+      </div>
+
       <div class="card am fu">
         <div class="ico">🔒</div>
         <div class="cbody">
           <div class="cname">Набор Durex</div>
-          <div class="cdesc">Без предисловий про презервативы — ты взрослая, это твоё.<br><br>
-          Про лубрикант скажу отдельно: знаю-знаю, ты сейчас думаешь <em>«зачем, пустая трата денег»</em> 😄 Я сам так думал. Но поверь брату с опытом — презерватива одного недостаточно, разница реально ощутимая. Попробуй. Если стесняешься предложить парню — не торопись, подождёшь пока отношения станут покрепче. Или выбросишь — я не обижусь 🙈</div>
+          <div class="cdesc">Без предисловий про презервативы — я уверен что их берут твои парни, как говорится "любишь кататся луби и саночки тараканить", та и ты уже давно в теме .<br><br>
+          Про лубрикант скажу отдельно: знаю-знаю, ты сейчас думаешь <em>«зачем, пустая трата денег»</em> 😄 Я сам так когда-то думал. Но поверь  —  иногда, не всегда но всё же иногда одного презерватива(если ты ими пользуешся конечно 😉) недостаточно для реально хороших ощущений. Попробуй. Если стесняешься предложить парню — не торопись, подождёшь пока отношения станут покрепче. Или выбросишь если я сильно не угадал — я не обижусь 🙈</div>
           <span class="ctag">безопасность · твой выбор</span>
         </div>
       </div>
@@ -426,11 +481,17 @@
 
     <div class="closing fu">
       <div class="closing-emoji">🤍</div>
-      <h3>От автора</h3>
-      <p>Пользуйся с удовольствием и вовремя докладывай расходники. У тебя есть самый заботливый бро на свете — и он за тебя спокоен только когда ты в порядке.</p>
-      <p class="feedback">Напиши мне — получила, всё нашла, всё норм? 😄</p>
+      <h3>P.S.</h3>
+      <!-- FIX 4: Telegram ссылки -->
+      <p>Пользуйся с удовольствием и вовремя докладывай расходники(если нужны будут <a href="https://t.me/meliowar">напиши мне</a>). Не стесняйся — если ты в порядке и комфорте то и мне спокойнее и приятнее.</p>
+      <p class="feedback"><a href="https://t.me/meliowar">Напиши мне</a> — получила, всё ли я правильно сделал, не обидил ли? что ещё можно улучшить в таком наборе?</p>
       <div class="sig">🤝🔥 by your best bro Ramirez</div>
     </div>
+
+    <!-- FIX 4: нормальная Telegram-кнопка вместо сырого div -->
+    <a href="https://t.me/meliowar" class="tg-btn fu">
+      ✈️ Написать Мне в телегу
+    </a>
 
   </div>
 
